@@ -1,0 +1,76 @@
+</!DOCTYPE html>
+<html>
+<head>
+	<title>html表单基础</title>
+	<meta charset="utf-8">
+	<meta http-equiv="refresh" content="5">
+</head>
+<body>
+
+<!-- navigator -->
+	<p>
+		<a href="html标签基础.html#table" target="_blank">有用的提示</a>
+
+		<a href="#input">input</a>
+		<a href="#event">event</a>
+	</p>
+	
+<!-- input -->
+	<hr/>
+	<p id="input" style="color: blue;">
+		标签:input<br/>
+		属性:type()<br/>
+	</p>
+	
+	<form action=".jsp" method="post">
+		账户:<input type="text"><br/>
+		密码:<input type="password"><br/>
+		简介:<br/>
+
+		<!-- 富文本输入 -->
+		<textarea name="info" rows="10" cols="15"></textarea><br/>
+
+		<!-- 单选 -->
+		<input type="radio" name="sex" value="female">Female<br/>
+		<input type="radio" name="sex" value="male" checked="checked">Male<br/>
+
+		<!-- 多选 -->
+		<input type="checkbox" name="hobbies" value="game">game<br/>
+		<input type="checkbox" name="hobbies" value="photo">photo<br/>
+
+		<!--下拉框  -->
+		<select>
+			<option value="female">female</option>
+			<option value="male" selected="selected">male</option>
+		</select><br/>
+		<select>
+			<optgroup label="Swedish Cars">
+				<option value ="volvo" disabled="disabled">Volvo</option>
+				<option value ="saab" selected="selected">Saab</option>
+			</optgroup>
+			<optgroup label="German Cars">
+				<option value ="mercedes">Mercedes</option>
+				<option value ="audi">Audi</option>
+			</optgroup>
+		</select><br/>
+
+		<!-- 文件 -->
+		<input type="file" name="简历"><br/>
+
+		<!-- 隐藏区域 -->
+		<input type="hidden"><br/>
+
+		<!-- 提交-->
+		<input type="submit"><br/>
+
+		<!-- 重置-->
+		<input type="reset"><br/>
+
+		<!-- 空按钮-->
+		<button>hehe</button>
+	</form>
+
+<!-- event -->
+
+</body>
+</html>

@@ -1,0 +1,158 @@
+</!DOCTYPE html>
+<html>
+<head>
+	<title>html标签基础</title>
+	<meta charset="utf-8">
+	<meta http-equiv="refresh" content="2">
+</head>
+<body>
+
+<!-- navigator -->
+	<p>
+		<a href="html标签基础.html#table">有用的提示</a>
+
+		<a href="#hx">hx</a>
+		<a href="#p">p</a>
+		<a href="#a">a</a>
+		<a href="#img">img</a>
+		<a href="#list">list</a>
+		<a href="#table">table</a>	<br/>
+		
+	</p>
+	
+<!-- h1-h6 -->
+	<hr/>
+	<p id="hx" style="color: blue;">
+		标签:h1-h6<br/>
+		属性:align<br/>
+	</p>
+	
+	<h1>这是标题</h1>
+	<h2>这是标题</h2>
+	<h3>这是标题</h3>
+	<h4 align="justify">这是标题</h4>
+	<h5 align="right">这是标题</h5>
+	<h6 align="center">这是标题</h6>
+	<h7>这是标题</h1>
+
+<!-- p -->
+	<hr/>
+	<p id="p" style="color: blue;">
+		标签:p<br/>
+		属性:align<br/>
+	</p>
+	<p>
+		line1,
+			line2,
+				line3
+	</p>
+	<p align="right">
+	注意:<br/>
+	1.段落的行数依赖于浏览器窗口的大小。如果调节浏览器窗口的大小，将改变段落中的行数。<br/>
+	2.浏览器忽略了源代码中的排版（省略了多余的空格和换行）。所有连续的空格或空行都会被算作一个空格<br/>
+	3.使用br标签换行<br/>
+	</p>
+	<p>
+		字符转义&lt;p
+	</p>
+
+<!-- a -->
+	<hr/>
+	<p id="a" style="color: blue;">
+		标签:a<br/>
+		属性:href target<br/>
+	</p>
+	<a href="http://www.w3school.com.cn/tags/tag_a.asp">a标签属性</a>
+	<a href="https://www.baidu.com" target="_blank">attr-target</a>
+	<a href="file:///D:/Java%20Web/html&css/HTML5%20%E5%85%83%E7%B4%A0%E6%A0%87%E7%AD%BE%E5%90%AB%E4%B9%89%E5%A4%A7%E5%85%A8(%E5%85%83%E7%B4%A0%E5%91%A8%E6%9C%9F%E8%A1%A8)%E2%80%94HTML5%E6%98%9F%E7%A9%BA.html" target="_blank" title="图片超链接">
+		<img src="img_summary.png" width="20%" height="20%" >
+	</a>
+
+	
+<!-- img -->
+	<hr/>
+	<p id="img" style="color: blue;">
+		标签:img<br/>
+		属性:src alt height/width(px,%)<br/>
+	</p>
+	
+	<img src="ccc.png" alt="图丢了" width="160px" height="90px" />
+	<img src="img_summary.png" width="160px" height="90px" />
+	<img src="img_summary.png" width="20%" height="20%" />
+	<p>
+		呵呵呵<img src="img_icon.png" align="top" width="30px" height="30px" />嘿嘿嘿<br/>
+		呵呵呵<img src="img_icon.png" align="center" width="30px" height="30px" />嘿嘿嘿<br/>
+		呵呵呵<img src="img_icon.png" align="bottom" width="30px" height="30px" />嘿嘿嘿<br/>
+	</p>
+
+<!-- list -->
+	<hr/>
+	<p id="list" style="color: blue;">
+		标签:ol li<br/>
+		属性:type(1 a A i I) start<br/>
+	</p>
+
+	<ol type="1" start="2">
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+	</ol>
+	<p style="color: blue;">
+		标签:ul li<br/>
+		属性:type(disc circle square)<br/>
+	</p>
+	<ul>
+		<li>1</li>
+		<li>2
+			<ul>
+			<li>1
+				<ul type="disc">
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				</ul>
+			</li>
+			<li>2</li>
+			<li>3</li>
+			</ul>
+		</li>
+		<li>3</li>
+	</ul>
+
+<!-- table --> 
+	<hr/>
+	<p id="table" style="color: blue;">
+		标签:table tr th td<br/>
+		属性:<br/>
+	</p>
+
+	<table border="2" cellpadding="2" cellspacing="2">
+		<<tr>
+			<th colspan="2" align="right">111</th>
+			<th colspan="2" align="right">111</th>
+		</tr>
+		<tr>
+			<td rowspan="2" headers="heihei">123</td>
+			<td>456</td>
+			<td>456</td>
+			<td>456</td>
+		</tr>
+		<tr>
+			<td>456</td>
+		</tr>
+		<tr>
+			<td colspan="2" headers="hehe">123</td>
+			<td>456</td>
+		</tr>
+	</table>
+
+<!--  -->
+	<hr/>
+	<p id="" style="color: blue;">
+		标签:<br/>
+		属性:<br/>
+	</p>
+
+
+</body>
+</html>
