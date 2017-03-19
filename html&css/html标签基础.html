@@ -3,13 +3,34 @@
 <head>
 	<title>html标签基础</title>
 	<meta charset="utf-8">
-	<meta http-equiv="refresh" content="2">
-</head>
-<body>
+	<meta http-equiv="refresh" content="3">
 
+	<style>
+		.city {
+		    background-color:black;
+		    color:white;
+		    margin:20px;
+		    padding:20px;
+		}	
+		span.province {
+	    	color:yellow;
+		}
+	</style>
+
+</head>
+
+<!-- frameset 不能与 body共用 -->
+<!-- <frameset rows="25%,50%">
+
+  <frame src="https://www.baidu.com">
+  <frame src="https://www.baidu.com">
+
+</frameset> -->
+
+<body>
 <!-- navigator -->
 	<p>
-		<a href="html标签基础.html#table">有用的提示</a>
+		<a href="html表单基础.html#input" target="_blank">to表单基础</a><br/>
 
 		<a href="#hx">hx</a>
 		<a href="#p">p</a>
@@ -17,6 +38,13 @@
 		<a href="#img">img</a>
 		<a href="#list">list</a>
 		<a href="#table">table</a>	<br/>
+
+		<a href="#div">div</a>	<br/>
+
+		<a href="#frameset">frameset与body冲突</a>
+		<a href="#iframe">iframe</a>	<br/>
+		
+		<a href="#关于文本">关于文本</a>	<br/>
 		
 	</p>
 	
@@ -64,9 +92,7 @@
 	</p>
 	<a href="http://www.w3school.com.cn/tags/tag_a.asp">a标签属性</a>
 	<a href="https://www.baidu.com" target="_blank">attr-target</a>
-	<a href="file:///D:/Java%20Web/html&css/HTML5%20%E5%85%83%E7%B4%A0%E6%A0%87%E7%AD%BE%E5%90%AB%E4%B9%89%E5%A4%A7%E5%85%A8(%E5%85%83%E7%B4%A0%E5%91%A8%E6%9C%9F%E8%A1%A8)%E2%80%94HTML5%E6%98%9F%E7%A9%BA.html" target="_blank" title="图片超链接">
-		<img src="img_summary.png" width="20%" height="20%" >
-	</a>
+	
 
 	
 <!-- img -->
@@ -84,6 +110,38 @@
 		呵呵呵<img src="img_icon.png" align="center" width="30px" height="30px" />嘿嘿嘿<br/>
 		呵呵呵<img src="img_icon.png" align="bottom" width="30px" height="30px" />嘿嘿嘿<br/>
 	</p>
+
+	<!-- 图像连接 -->
+	<br/>
+	<a href="http://www.html5star.com/manual/html5label-meaning/" target="_blank" title="html标签总结">
+		<img src="img_summary.png" width="20%" height="20%" >
+	</a>
+
+	<!-- 图像映射 -->
+	<br/>
+	<img src="img_planets.jpg" border="0" usemap="#planetmap" alt="Planets" />
+	<map name="planetmap" id="planetmap">
+		<area
+		shape="circle"
+		coords="180,139,14"
+		href ="https://www.baidu.com"
+		target ="_blank"
+		alt="Venus" />
+
+		<area
+		shape="circle"
+		coords="129,161,10"
+		href ="https://www.baidu.com"
+		target ="_blank"
+		alt="Mercury" />
+
+		<area
+		shape="rect"
+		coords="0,0,110,260"
+		href ="https://www.baidu.com"
+		target ="_blank"
+		alt="Sun" />
+	</map>
 
 <!-- list -->
 	<hr/>
@@ -123,11 +181,12 @@
 	<hr/>
 	<p id="table" style="color: blue;">
 		标签:table tr th td<br/>
-		属性:<br/>
+		table属性:border cellpadding cellspacing<br/>
+		th:colspan rowspan align<br/>
 	</p>
 
 	<table border="2" cellpadding="2" cellspacing="2">
-		<<tr>
+		<tr>
 			<th colspan="2" align="right">111</th>
 			<th colspan="2" align="right">111</th>
 		</tr>
@@ -146,13 +205,114 @@
 		</tr>
 	</table>
 
+
+<!-- div -->
+	<hr/>
+	<p id="div" style="color: blue;">
+		标签:div<br/>
+		属性:配合style class进行配置<br/>
+	</p>
+
+	<div class="city">
+		<h2><span class="province">河南</span>郑州</h2>
+		<p>郑州，河南省省会，中国中部地区重要的中心城市，国家重要的综合交通枢纽，中原经济区核心城市，地处华北平原南部、黄河下游，居河南省中部偏北，东接开封市，西依洛阳市，南部与许昌市、平顶山市接壤，北临黄河与新乡市、焦作市相望</p>
+	</div>
+
+	<div class="city">
+		<h2><span class="province">河南</span>洛阳</h2>
+		<p>洛阳，古称斟鄩、西亳、洛邑、雒阳、洛京、京洛、神都、洛城等，位于河南省西部、黄河中下游，因地处洛河之阳而得名，是国务院首批公布的国家历史文化名城，中国四大古都之一</p>
+	</div>
+
+<!-- iframe -->
+	<hr/>
+	<p id="iframe" style="color: blue;">
+		标签:iframe 内联框架<br/>
+		属性:src width height frameborder<br/>
+	</p>
+	
+	<iframe src="https://www.baidu.com" width="30%" height="30%" frameborder="0"></iframe>
+
+	<a href="https://www.baidu.com" target="miframe">点我显示</a>
+	<iframe name="miframe" width="30%" height="30%" frameborder="1"></iframe>
+
+
+<!-- 关于文本 -->
+	<hr/>
+	<p id="关于文本" style="color: blue;">
+		标签:关于文本的<br/>
+	</p>
+
+	<h2>文本格式化</h2>
+	<p>
+		<b>天青色等烟雨，</b><strong>而我在等你</strong> <br/>
+		<big>炊烟袅袅升起，</big><small>隔江千万里</small> <br/>
+		<em>在瓶底书汉隶仿前朝的飘逸，</em><i>是我为遇见你伏笔</i><br/>
+		H<sub>2</sub> E=mc<sup>2</sup> <br/>
+		<del>素胚勾勒的青花笔锋浓转淡，</del><ins>临摹描绘的牡丹一如你初妆</ins> <br/>
+	</p>
+
+	
+	<h2>预格式文本</h2>
+	<p>
+		<pre>
+这是
+预格式文本。
+它保留了      空格
+和换行。
+		</pre>
+		<pre>
+		for i = 1 to 10
+		print i
+		next i
+		</pre>
+	</p>
+
+	<h2>“计算机输出”标签</h2>
+	<code>Computer code</code> <br />
+	<kbd>Keyboard input</kbd> <br />
+	<tt>Teletype text</tt> <br />
+	<samp>Sample text</samp> <br />
+	<var>Computer variable</var> <br />
+
+	<h2>地址</h2>
+	<address>
+		Written by <a href="mailto:webmaster@example.com">Donald Duck</a>.<br> 
+		Visit us at:<br>
+		Example.com<br>
+		Box 564, Disneyland<br>
+		USA
+	</address>
+
+	<h2>缩写</h2>
+	<abbr title="etcetera">etc.</abbr> <br/>
+	<acronym title="World Wide Web">WWW</acronym> <br/>
+
+	<h2>文字方向</h2>
+	<bdo dir="rtl">
+	Here is some Hebrew text
+	</bdo>
+
+	<h2>引用</h2>
+	这是长的引用：
+	<blockquote>
+	这是长的引用。这是长的引用。这是长的引用。这是长的引用。这是长的引用。这是长的引用。这是长的引用。这是长的引用。这是长的引用。这是长的引用。这是长的引用。
+	</blockquote>
+
+	这是短的引用：
+	<q>
+	这是短的引用。
+	</q>
+
+
+
 <!--  -->
 	<hr/>
 	<p id="" style="color: blue;">
 		标签:<br/>
 		属性:<br/>
 	</p>
-
+	
+	
 
 </body>
 </html>
