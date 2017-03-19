@@ -1,0 +1,29 @@
+<style type="text/css" media="screen">
+
+	/* 排列顺序 link/visited - hover - active */
+	a.test:link {color: blue}
+	a.test:visited {color: gray}
+	a.test:hover {color: red}
+	a.test:active {color: #FF00FF}
+
+	a.one:visited {color: red}
+	a.one:link {color: blue}
+	a.one:hover {color: #ffcc00}
+
+	a.two:link {color: blue}
+	a.two:visited {color: red}
+	a.two:hover {font-size: 150%}
+
+	a.three:link {color: blue}
+	a.three:visited {color: red}
+	a.three:hover {background: #66ff66}
+
+	a.four:link {color: blue}
+	a.four:visited {color: red}
+	a.four:hover {font-family: monospace}
+
+	a.five:link {color: blue; text-decoration: none}
+	a.five:visited {color: red; text-decoration: none}
+	a.five:hover {text-decoration: underline}
+
+</style>

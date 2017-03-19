@@ -1,0 +1,37 @@
+<style type="text/css" media="screen">
+	/* 选择器类型1-通配选择器*/
+	*{
+		color: green;
+	}
+	/* 选择器类型2-标签选择器*/
+	p{
+		color: red;
+	}
+	p.add{
+		color: gray;
+	}
+	p#add2{
+		color: #4a86e8;
+	}
+	/* 选择器类型3-类选择器*/
+	.testClass1{
+		color: yellow;	
+	}
+	/* 选择器类型4-id选择器*/
+	#testID1{
+		color: blue;		
+	}
+	/* 选择器类型5-群组选择器*/
+	li,td,#testID2,.testClass2{
+		color: #ff00ff;font-size: 30px;
+	}
+	/* 选择器类型6-属性选择器*/
+	img[title][id=img1]{
+		color: #ff00ff;border: 1px;width: 200px,height: 100px;
+	}
+	/* 选择器类型7-后代选择器	特征:所有
+	*/
+	p em {color:red;}
+	/* 选择器类型8-子代选择器	特征:本层所有,不能跨层*/
+	p > strong {color:red;}
+</style>

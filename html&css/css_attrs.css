@@ -1,0 +1,78 @@
+<style type="text/css" media="screen">
+	
+	/* 字体属性
+		字体 font-family: "幼圆";
+		字号 font-size: px cm %;
+		格式 font-style: normal italic oblique;
+		粗细 font-weight: lighter 100-400(normal)-700(bold)-900 bolder;
+	 */
+	.attr_font{
+		font-family: cursive;
+		font-size: 25px;
+		font-style: normal;
+		font-weight: bold;
+	}
+
+	/* 文本属性
+		对齐 text-align: center;
+		缩进 text-indent: length(px) %;
+		装饰 text-decoration: none underline overline line-through;
+		字间距 letter-spacing: length(px);
+		行高 line-height: number(乘字体尺寸) length(px) %;
+	 */
+	.attr_text{
+		color: #7994af;
+		text-align: left;
+		text-indent: %5;
+		text-decoration: underline;
+		letter-spacing: 2px;
+		line-height: 2px;
+	}
+
+	/* 背景 
+		背景颜色 background-color: word rgb #hexnum;
+		背景图片 background-image: url;
+		开始位置 background-position: left top right bottom center;
+		background-size: px %(width,height) (ont,the other auto) cover(覆盖,会有缺损) contain(适应) ; 
+		重复设定 background-repeat: repeat repeat-x repeat-y no-repeat;
+		跟随滚动条 background-attachment: fixed scroll;
+	*/
+	.attr_back{
+		background-image: url(img_icon.png);
+		background-repeat: no-repeat;
+		background-attachment: scroll;
+		background-position: left;
+		background-size: contain;
+	}
+
+	/* 边框
+		边框颜色 background-color: word rgb #hexnum;
+		边框宽度 border-width: px;
+		边框样式 border-style: solid dashed虚线 double双实线;
+	 */
+	.attr_border{
+		border-color: #7994af;
+		border-width: 2px;
+		border-style: dashed;
+	}
+
+	/* 盒子模型
+		border attrs:style width color position,可以统一声明或独自声明
+		padding:内边距
+		margin:外边距，存在合并的情况
+	 */
+	 .attr_box{
+	 	border: 1px,2px,3px,4px;
+	 	border-style: none solid double dashed;
+	 	border-color: red blue yellow green;
+	 	margin: 10px,10px,10px,10px;
+	 	padding: 5px,5px,5px,5px;
+	 }
+
+
+	/* 涉及到优先级的问题 */
+	div{
+		margin-bottom: 50px;
+		background-color: #d6e8fa;
+	}
+<style/>

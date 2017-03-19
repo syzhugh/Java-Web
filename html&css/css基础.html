@@ -1,47 +1,25 @@
-<!DOCTYPE html>
+<!DOCTYPE>
 <html>
 <head>
 	<title>css基础</title>
 	<meta charset="utf-8">
-	<meta http-equiv="refresh" content="5">
+	<meta http-equiv="refresh" content="3">
 
 	<!-- 使用方式1:外部加载形式 -->
-	<link rel="stylesheet" type="text/css" href="css_test.css">
+	<link rel="stylesheet" type="text/css" href="css_selector.css">
+	<link rel="stylesheet" type="text/css" href="css_pseudoclass.css">
+	<link rel="stylesheet" type="text/css" href="css_attrs.css">
+
 	<!-- 使用方式2:头部形式 -->
 	<style type="text/css" media="screen">
-		/* 选择器类型1-通配选择器*/
-		*{
-			color: green;	
+		.oneClass{
+			/* attrs */
 		}
-		/* 选择器类型2-标签选择器*/
-		p{
-			color: red;
-		}
-		p.add{
-			color: gray;
-		}
-		/* 选择器类型3-类选择器*/
-		.testClass1{
-			color: yellow;	
-		}
-		/* 选择器类型4-id选择器*/
-		#testID1{
-			color: blue;		
-		}
-		/* 选择器类型5-群组选择器*/
-		li,td,#testID2,.testClass2{
-			color: #ff00ff;font-size: 30px;
-		}
-		/* 选择器类型6-属性选择器*/
-		img[title][id=img1]{
-			color: #ff00ff;border: 1px;width: 200px,height: 100px;
-		}
-		/* 选择器类型7-后代选择器	特征:所有
-		*/
-		p em {color:red;}
-		/* 选择器类型8-子代选择器	特征:本层所有,不能跨层*/
-		p > strong {color:red;}
 	</style>
+
+	<a href="#selector">selector</a>
+	<a href="#pseudoclass">pseudoclass</a>
+	<a href="#attrs">attrs</a>
 
 </head>
 <body>
@@ -50,10 +28,11 @@
 	
 	<!-- 选择器的使用 -->
 	<hr/>
-	<h2>选择器效果展示</h2>
+	<h2 id="selector">选择器效果展示</h2>
 		<span>通配选择器</span>
 		<p>标签选择器</p>
 		<p class="add">标签+类选择器</p>
+		<p id="add2">标签+id选择器</p>
 		<p class="testClass1">类选择器</p>
 		<p id="testID1">id选择器</p>
 		<ul>
@@ -82,9 +61,37 @@
 		<p>This is <strong>very</strong> <strong>very</strong> important.</p>
 		<p>This is <em>really <strong>very</strong></em> important.</p>
 
-	<!-- 常用属性 -->
+	<!-- pseudo class -->
 	<hr/>
-	<h2>常用属性</h2>
+	<h2 id="pseudoclass">伪类,针对a标签</h2>
+	<a class="test" href="https://www.baidu.com" target="_blank">百度一下</a>
+	<a class="one" href="https://www.baidu.com" target="_blank">百度一下</a>
+	<a class="two" href="https://www.baidu.com" target="_blank">百度一下</a>
+	<a class="three" href="https://www.baidu.com" target="_blank">百度一下</a>
+	<a class="four" href="https://www.baidu.com" target="_blank">百度一下</a>
+	<a class="five" href="https://www.baidu.com" target="_blank">百度一下</a>
+
+	<!-- attrs -->
+	<hr/>
+	<h2 id="attrs">常用属性</h2>
+	<div>
+		test div
+	</div>
+	<div class="attr_font">
+		font attrs
+	</div>
+	<div class="attr_text">
+		text attrs
+	</div>
+	<div class="attr_back">
+		backgroup attrs
+	</div>
+	<div class="attr_border">
+		border atrrs
+	</div>
+	<div class="attr_box">
+		box attrs
+	</div>
 
 	<!-- 定位 -->
 	<hr/>
