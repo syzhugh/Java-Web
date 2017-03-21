@@ -60,19 +60,48 @@
 		border attrs:style width color position,可以统一声明或独自声明
 		padding:内边距
 		margin:外边距，存在合并的情况
+		border-style: none solid double dashed;
+	 	border-color: red blue yellow green;
 	 */
 	 .attr_box{
 	 	border: 1px,2px,3px,4px;
-	 	border-style: none solid double dashed;
-	 	border-color: red blue yellow green;
+	 	border-style: none;
+	 	border-color: red;
 	 	margin: 10px,10px,10px,10px;
 	 	padding: 5px,5px,5px,5px;
 	 }
 
+
+	div.clear{
+		border: 2px double;
+	}
+	div.clear::after{
+		display: block;
+		clear: both;
+		visibility: hidden;
+		height: 0;
+		content: "abc";
+	}	
+
+	li.list{
+		display: inline;
+	}
+
+	a.alist{
+		color: white;
+		float:left;
+		width:7em;
+		text-decoration:none;
+	}
+	a.alist:link {background-color: red;}
+	/* a.alist:visited {color: gray} */
+	a.alist:hover {background-color: purple;}
+	/* a.alist:active {color: #FF00FF} */
 
 	/* 涉及到优先级的问题 */
 	div{
 		margin-bottom: 50px;
 		background-color: #d6e8fa;
 	}
+
 <style/>

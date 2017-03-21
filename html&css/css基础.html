@@ -11,20 +11,26 @@
 	<link rel="stylesheet" type="text/css" href="css_attrs.css">
 
 	<!-- 使用方式2:头部形式 -->
-	<style type="text/css" media="screen">
+	<style type="text/css" media="screen"> 、
 		.oneClass{
 			/* attrs */
 		}
 	</style>
 
+	<a href="#model">model</a>
 	<a href="#selector">selector</a>
 	<a href="#pseudoclass">pseudoclass</a>
-	<a href="#attrs">attrs</a>
+	<a href="#attrs">attrs</a> <br/>
+
+	<a href="#location">location</a>
+	<a href="#clear">clear</a>
 
 </head>
 <body>
 	<!-- 使用方式3:内联形式 -->
-	<div style=""></div>
+	<hr/>
+	<h2 id="model">创建方式</h2>
+	<div style="background-color: blue;width: 200px;height: 120px"></div>
 	
 	<!-- 选择器的使用 -->
 	<hr/>
@@ -95,7 +101,125 @@
 
 	<!-- 定位 -->
 	<hr/>
-	<h2>定位</h2>
+	<h2 id="location">定位</h2>
+	<p style="">
+		<b>内联元素<b/> <br/>
+		a i u b span font <br/>
+		<b>块级元素<b/> <br/>
+		body hx div p <br/> 
+		ul ol table <br/>
+		li tr td <br/>
 
+	</p>
+
+	<!-- 相对定位 -->
+	<h3>相对定位</h3>
+	<p style="position: relative;right: 30px">一鼓作气</p>
+	<p>一鼓作气</p>
+	<p style="position: relative;left: 30px">一鼓作气</p>	
+	
+	<!-- 相对定位 -->
+	<h3>绝对定位</h3>
+	<div>
+	<p>占位1</p>	
+	<p style="position: relative;left: 100px;top: 20px">彼竭我盈</p>
+	<p>占位1</p>	
+	</div>
+
+	<div>
+	<p>占位2</p>	
+	<p style="position: absolute;left: 200px;top: 100px;z-index: -1">顾克之</p>
+	<p>占位2</p>	
+	</div>
+
+	<div>
+	<p>占位3</p>	
+	<p style="position: absolute;left: 100px;top: 100px">彼竭我盈</p>
+	<p>占位3</p>	
+	</div>
+
+	<!-- 浮动 -->
+	<h3>相对定位</h3>
+
+
+	<!-- round1 
+		div块的浮动效果
+	-->
+	<h4>div块的浮动效果</h4>
+	<div style="width: 25px;height: 25px;background-color: red; float: left;">
+	</div>
+	<div style="width: 30px;height: 30px;background-color: blue;">
+	</div>
+	<div style="width: 25px;height: 25px;background-color: yellow;">
+	</div>
+
+	<!-- round2
+		img and p
+	-->
+	<h4>img and p的浮动效果</h4>
+	<div>
+		<img src="img_icon.png" style="width: 25px;height: 25px;background-color: yellow;" />
+		<p>
+			Android是一种基于Linux的自由及开放源代码的操作系统，主要使用于移动设备，如智能手机和平板电脑，由Google公司和开放手机联盟领导及开发。Android是一种基于Linux的自由及开放源代码的操作系统，主要使用于移动设备，如智能手机和平板电脑，由Google公司和开放手机联盟领导及开发。Android是一种基于Linux的自由及开放源代码的操作系统，主要使用于移动设备，如智能手机和平板电脑，由Google公司和开放手机联盟领导及开发。
+		</p>
+
+		<img src="img_icon.png"  style="width: 25px;height: 25px;background-color: yellow;float: left;"/>
+		<p>
+			Android是一种基于Linux的自由及开放源代码的操作系统，主要使用于移动设备，如智能手机和平板电脑，由Google公司和开放手机联盟领导及开发。Android是一种基于Linux的自由及开放源代码的操作系统，主要使用于移动设备，如智能手机和平板电脑，由Google公司和开放手机联盟领导及开发。Android是一种基于Linux的自由及开放源代码的操作系统，主要使用于移动设备，如智能手机和平板电脑，由Google公司和开放手机联盟领导及开发。
+		</p>
+
+		<img src="img_icon.png"  style="background-color: yellow;float: left;"/>
+		<p style="float: left;">
+			Android是一种基于Linux的自由及开放源代码的操作系统，主要使用于移动设备，如智能手机和平板电脑，由Google公司和开放手机联盟领导及开发。Android是一种基于Linux的自由及开放源代码的操作系统，主要使用于移动设备，如智能手机和平板电脑，由Google公司和开放手机联盟领导及开发。Android是一种基于Linux的自由及开放源代码的操作系统，主要使用于移动设备，如智能手机和平板电脑，由Google公司和开放手机联盟领导及开发。
+		</p>
+
+		<img src="img_icon.png"  style="background-color: yellow;float: left;"/>
+		<p style="color: blue;">
+			Android是一种基于Linux的自由及开放源代码的操作系统，主要使用于移动设备，如智能手机和平板电脑，由Google公司和开放手机联盟领导及开发。Android是一种基于Linux的自由及开放源代码的操作系统，主要使用于移动设备，如智能手机和平板电脑，由Google公司和开放手机联盟领导及开发。Android是一种基于Linux的自由及开放源代码的操作系统，主要使用于移动设备，如智能手机和平板电脑，由Google公司和开放手机联盟领导及开发。
+		</p>
+	</div>
+
+	<div style="clear: both;">
+		<img src="img_icon.png"  style="width: 70px;height: 70px;background-color: yellow;float: left;"/>
+		<p style="color: red;">
+			Android是一种基于Linux的自由及开放源代码的操作系统，主要使用于移动设备，如智能手机和平板电脑，由Google公司和开放手机联盟领导及开发。Android是一种基于Linux的自由及开放源代码的操作系统，主要使用于移动设备，如智能手机和平板电脑，由Google公司和开放手机联盟领导及开发。
+		</p>
+		<p style="color: red;clear: left;">
+			Android是一种基于Linux的自由及开放源代码的操作系统，主要使用于移动设备，如智能手机和平板电脑，由Google公司和开放手机联盟领导及开发。Android是一种基于Linux的自由及开放源代码的操作系统，主要使用于移动设备，如智能手机和平板电脑，由Google公司和开放手机联盟领导及开发。。
+		</p>
+	</div>
+
+	
+
+	<p>
+	<span style="float:left;width:0.7em;line-height:80%;font-size:400%;font-family:algerian,courier;">
+		A
+	</span>
+	ndroid是一种基于Linux的自由及开放源代码的操作系统，主要使用于移动设备，如智能手机和平板电脑，由Google公司和开放手机联盟领导及开发。Android是一种基于Linux的自由及开放源代码的操作系统，主要使用于移动设备，如智能手机和平板电脑，由Google公司和开放手机联盟领导及开发。Android是一种基于Linux的自由及开放源代码的操作系统，主要使用于移动设备，如智能手机和平板电脑，由Google公司和开放手机联盟领导及开发。Android是一种基于Linux的自由及开放源代码的操作系统，主要使用于移动设备，如智能手机和平板电脑，由Google公司和开放手机联盟领导及开发。。
+	</p>
+
+	<ul style="float: left;width: 100%;padding:0;margin:0;list-style-type:none;">
+	<li class="list"><a class="alist" href="#">Link one</a></li>
+	<li class="list"><a class="alist" href="#">Link two</a></li>
+	<li class="list"><a class="alist" href="#">Link three</a></li>
+	<li class="list"><a class="alist" href="#">Link four</a></li>
+	</ul>
+
+
+	<h4 id="clear">消除浮动影响</h4>
+	<div style="border: 2px double;">
+		<img src="img_icon.png"  style="width: 70px;height: 70px;background-color: yellow;float: left;"/>
+		<p style="color: red;float: left;">
+			Android是一种基于Linux的自由及开放源代码的操作系统，主要使用于移动设备，如智能手机和平板电脑，由Google公司和开放手机联盟领导及开发。Android是一种基于Linux的自由及开放源代码的操作系统，主要使用于移动设备，如智能手机和平板电脑，由Google公司和开放手机联盟领导及开发。。
+		</p>
+		<div style="width: 0px;height: 0px;clear: both;"></div>
+	</div>
+
+	<div class="clear">
+		<img src="img_icon.png"  style="width: 70px;height: 70px;background-color: yellow;float: left;"/>
+		<p style="color: red;float: left;">
+			Android是一种基于Linux的自由及开放源代码的操作系统，主要使用于移动设备，如智能手机和平板电脑，由Google公司和开放手机联盟领导及开发。Android是一种基于Linux的自由及开放源代码的操作系统，主要使用于移动设备，如智能手机和平板电脑，由Google公司和开放手机联盟领导及开发。。
+		</p>
+	</div>
 </body>
 </html>
