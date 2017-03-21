@@ -1,0 +1,5 @@
+<style>
+	h2::before{
+		content: "<hr/>";
+	}
+<style/>

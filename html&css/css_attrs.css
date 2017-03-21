@@ -71,7 +71,7 @@
 	 	padding: 5px,5px,5px,5px;
 	 }
 
-
+	/* clear */
 	div.clear{
 		border: 2px double;
 	}
@@ -82,7 +82,8 @@
 		height: 0;
 		content: "abc";
 	}	
-
+	
+	/* 横向菜单 */
 	li.list{
 		display: inline;
 	}
@@ -98,7 +99,10 @@
 	a.alist:hover {background-color: purple;}
 	/* a.alist:active {color: #FF00FF} */
 
-	/* 涉及到优先级的问题 */
+
+	/* 全局配置
+		问题：优先级 属性覆盖
+	 */
 	div{
 		margin-bottom: 50px;
 		background-color: #d6e8fa;

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js基础</title>
+	<meta http-equiv="refresh" content="3">
+	<link rel="stylesheet" type="text/css" href="testjs_css_pseudo.css">
+
+	<script src="testjs_function.js" type="text/javascript" charset="utf-8" async defer></script>
+</head>
+<body>
+	<!-- Hello js -->
+	<hr/>
+	<h2 id="hello js">Hello js</h2>
+	<button type="button" onclick="alert('欢迎!')">点我</button>
+	<button type="button" onclick="displayHello()">点我</button>
+	<p id="hello"></p>
+
+	<!-- obj -->
+	<hr/>
+	<h2 id="Obj">Obj</h2>
+	<h3>basic</h3>
+	<script type="text/javascript">
+		// 全局变量 局部变量
+		i = 100;
+		function test(){
+			var j = 1000;
+		}
+		document.writeln(i);
+		document.writeln(j);
+	</script>
+
+	<h3>string</h3>
+	<script type="text/javascript">
+		// mode1
+		var str1 = "hello";
+		document.writeln(str1+str1.length);
+		// mode2
+		var str2 = new String("js");
+		document.writeln(str2+str2.length);
+		// methods-html
+		// methods-like java
+	</script>
+
+	<h3>array</h3>
+	<script type="text/javascript">
+		// mode
+		var arr1 = [1,2,3];
+		var arr2 = new Array(10);
+		var arr3 = new Array(1,2,3,4,5);
+		// methods
+	</script>
+
+	<h3>date</h3>
+	<script type="text/javascript">
+		// mode
+		var date = new Date();
+		document.writeln(date);
+		// methods
+		document.writeln(date.toLocaleString());
+		document.writeln(date.getTime());// 毫秒数用于处理缓存
+	</script>
+
+	<h3>math</h3>
+	<script type="text/javascript">
+		// mode 静态调用
+		// methods
+		document.writeln("abs(-1):"+Math.abs(-10));
+		document.writeln("random:"+Math.random()*10);
+	</script>
+
+	<!-- function -->
+	<hr/>
+	<h2 id="function">function</h2>
+	<h3>全局函数</h3>
+	<script type="text/javascript">
+		// encode
+		var encode = encodeURI("你好");
+		var decode = decodeURI(encode);
+		document.writeln(encode +" " +decode);
+		// isNaN
+		document.writeln("<br/>");
+		document.writeln("1 isNaN: " + isNaN(1));
+		document.writeln("abc isNaN: " + isNaN("abc"));
+		// parse
+		document.writeln("<br/>");
+		document.writeln("str 123: "+parseInt("123")+" "+parseFloat("123"));
+	</script>
+
+	<h3>模拟重载</h3>
+	<script type="text/javascript">
+		// js不存在函数重载
+		function test(num1,num2,num3){
+			if (arguments.length>1) {
+				return 100;
+			}else{
+				return arguments[0];
+			}
+		}
+		document.writeln(test(-1));
+		document.writeln(test(1,2));
+		document.writeln(test(1,2,3));
+	</script>
+
+
+	<!-- class -->
+	<hr/>
+	<h2 id="class">class</h2>
+
+
+</body>
+</html>
