@@ -10,69 +10,115 @@
 <body>
 	<!-- Hello js -->
 	<hr/>
-	<h2 id="hello js">Hello js</h2>
+	<h2 id="hello">Hello js</h2>
 	<button type="button" onclick="alert('欢迎!')">点我</button>
 	<button type="button" onclick="displayHello()">点我</button>
 	<p id="hello"></p>
 
-	<!-- obj -->
+	<!-- basis -->
 	<hr/>
-	<h2 id="Obj">Obj</h2>
-	<h3>basic</h3>
+	<h2>Basis</h2>
+
+
+	<h3 id="variable">variable</h3>
 	<script type="text/javascript">
-		// 全局变量 局部变量
-		i = 100;
-		function test(){
-			var j = 1000;
+		/*1.作用域*/
+		var a1 = 100;//全局变量 局部变量会在函数运行以后被删除。
+		function scope(){
+			var a2 = 100;//局部变量 全局变量会在页面关闭后被删除。
 		}
-		document.writeln(i);
-		document.writeln(j);
-	</script>
+		document.write(a1+"<br/>");
+		try{
+			document.write(a2+"<br/>");
+		}catch(err){
+			document.write("error:"+err+"<br/>");
+		}
 
-	<h3>string</h3>
-	<script type="text/javascript">
-		// mode1
-		var str1 = "hello";
-		document.writeln(str1+str1.length);
-		// mode2
-		var str2 = new String("js");
-		document.writeln(str2+str2.length);
-		// methods-html
-		// methods-like java
-	</script>
+		/*2.原始类型*/
+		document.write("<br/>");
+		var b1;
+		var b2 = null;//类型为obj,遗留问题,忽略
+		var b3 = 0.3;
+		var b4 = "123";
+		var b5 = true;
+		document.write("b1 " + (typeof b1)+"<br/>");
+		document.write("b2 " + (typeof b2)+"<br/>");
+		document.write("b3 " + (typeof b3)+"<br/>");
+		document.write("b4 " + (typeof b4)+"<br/>");
+		document.write("b5 " + (typeof b5)+"<br/>");
+		b5 = undefined;
+		document.write("b5 " + (typeof b5)+"<br/>");//用于清除对象
 
-	<h3>array</h3>
-	<script type="text/javascript">
-		// mode
+		/*3.引用类型*/
+		document.write("<br/>");
+		var str = new String("123");
+		document.write("str " + (typeof str)+"<br/>");
+
 		var arr1 = [1,2,3];
-		var arr2 = new Array(10);
-		var arr3 = new Array(1,2,3,4,5);
-		// methods
-	</script>
-
-	<h3>date</h3>
-	<script type="text/javascript">
-		// mode
+		var arr2 = new Array(3);
+		var arr3 = new Array(1,2,3,4);
+		document.write("arr1 " + (typeof arr1)+" "+ arr1.length +"<br/>");
+		document.write("arr2 " + (typeof arr2)+" "+ arr2.length +"<br/>");
+		document.write("arr3 " + (typeof arr3)+" "+ arr3.length +"<br/>");
+		
 		var date = new Date();
-		document.writeln(date);
-		// methods
-		document.writeln(date.toLocaleString());
-		document.writeln(date.getTime());// 毫秒数用于处理缓存
+		document.write("date " + (typeof date)+"<br/>");
+		document.write(date.toLocaleString()+"<br/>");		// 当地时间格式化
+		document.write(date.getTime()+"<br/>");				// 毫秒数用于处理缓存
+
+		var num = new Number(123);
+		document.write("num " + (typeof num)+"<br/>");
+
+		var d1 = Math.PI;
+		document.write("d1 " + (typeof d1)+" "+ d1 +"<br/>");
+		document.write("Math " + (typeof Math) + " " + "<br/>");
+		document.writeln("abs(-1):"+Math.abs(-10)+ "<br/>");		//静态调用
+		document.writeln("random:"+Math.random()*10+ "<br/>");
+
+		/*0.注意区分*/
+		document.write("<br/>");
+		var num1 = 123;					//原始类型
+		var num2 = new Number(123);		//引用类型
+		
+		document.write("num1 " + (typeof num1)+"<br/>");
+		document.write("num2 " + (typeof num2)+"<br/>");
+
+		var str11 = "123";				//原始类型
+		var str12 = new String("123");	//引用类型
+		var str13 = String(123);		//系统提供的方法
+		document.write("str11 " + (typeof str11)+"<br/>");
+		document.write("str12 " + (typeof str12)+"<br/>");
+		document.write("str13 " + (typeof str13)+"<br/>");
+
+		var boolean1 = new Boolean();
+		document.write("boolean1 " + (typeof boolean1)+"<br/>");
 	</script>
 
-	<h3>math</h3>
+	<!-- 流程控制 -->
+	<h3 id="process">流程控制</h3>
 	<script type="text/javascript">
-		// mode 静态调用
-		// methods
-		document.writeln("abs(-1):"+Math.abs(-10));
-		document.writeln("random:"+Math.random()*10);
+		document.write("a1 " + a1 +" !上面定义的全局变量没清除"+"<br/>");		//上面定义的全局变量没清除
+
+		/*if else*/
+
+		/*for while
+			break continue
+		*/
+
+		/*switch*/
+
+		/*try catch 
+			throw
+		*/
 	</script>
+
+
 
 	<!-- function -->
 	<hr/>
-	<h2 id="function">function</h2>
-	<h3>全局函数</h3>
+	<h2 id="function">Function</h2>
 	<script type="text/javascript">
+		/*顶层函数(静态函数)*/
 		// encode
 		var encode = encodeURI("你好");
 		var decode = decodeURI(encode);
@@ -84,27 +130,74 @@
 		// parse
 		document.writeln("<br/>");
 		document.writeln("str 123: "+parseInt("123")+" "+parseFloat("123"));
-	</script>
 
-	<h3>模拟重载</h3>
-	<script type="text/javascript">
-		// js不存在函数重载
-		function test(num1,num2,num3){
-			if (arguments.length>1) {
-				return 100;
+
+		/*基本用法
+			参数 返回值
+		*/
+		/*模拟重载
+			js不存在函数重载
+		*/
+		document.write("<br/>");
+		function test1(num1,num2,num3){
+			if (arguments.length>0) {
+				var sum = 0;
+				for (var i = arguments.length - 1; i >= 0; i--) {
+					sum += arguments[i];
+				}
+				return sum;
 			}else{
-				return arguments[0];
+				return 0;
 			}
 		}
-		document.writeln(test(-1));
-		document.writeln(test(1,2));
-		document.writeln(test(1,2,3));
+		document.writeln(test1());
+		document.writeln(test1(-1));
+		document.writeln(test1(1,2));
+		document.writeln(test1(1,2,3));
+
 	</script>
 
-
-	<!-- class -->
+	<!-- obj -->
 	<hr/>
-	<h2 id="class">class</h2>
+	<h2 id="obj">Obj</h2>
+	<script type="text/javascript">
+		/*js obj
+			特点：
+				JavaScript 拥有动态类型。这意味着相同的变量可用作不同的类型
+				var x;               // x 为 undefined
+				var x = 5;           // 现在 x 为数字
+				var x = "John";      // 现在 x 为字符串
+
+			数据类型：
+				字符串（String）、数字(Number)、布尔(Boolean)、数组(Array)、对象(Object)、空（Null）、未定义（Undefined）。
+			原始类型：
+				string number boolean null(obj) undefined
+			引用类型：
+				String Number Boolean Array Date Math ... Object
+		*/
+
+
+		/*mode1 使用对象字面量的方式{}创建对象*/
+		var z1 = {
+			id:1,
+			name:"sun",
+			getAge:function(){
+				return 23;
+			}
+		};
+		document.write("z1 type: "+(typeof z1)+"<br/>");
+		document.write(z1.id+" "+z1.name+"<br/>");
+		document.write(z1.id+" "+z1["name"]+"<br/>");
+		document.write(z1.id+" "+z1.getAge+"<br/>");	//函数属性作为一个属性访问
+		document.write(z1.id+" "+z1.getAge()+"<br/>");	//函数属性作为一个方法访问
+
+
+		/*mode2 用function(函数)来模拟class(无参构造函数),(最简单，好理解，推荐使用)*/
+
+		/*mode3 用有参数构造函数来实现，这样定义更方便，扩展性更强(推荐使用)*/
+		
+
+	</script>
 
 
 </body>
