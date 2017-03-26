@@ -50,10 +50,13 @@
 		document.write("b5 " + (typeof b5)+"<br/>");//用于清除对象
 
 		/*3.引用类型*/
+
+		// String
 		document.write("<br/>");
 		var str = new String("123");
 		document.write("str " + (typeof str)+"<br/>");
 
+		// Array
 		var arr1 = [1,2,3];
 		var arr2 = new Array(3);
 		var arr3 = new Array(1,2,3,4);
@@ -61,14 +64,17 @@
 		document.write("arr2 " + (typeof arr2)+" "+ arr2.length +"<br/>");
 		document.write("arr3 " + (typeof arr3)+" "+ arr3.length +"<br/>");
 		
+		// Date
 		var date = new Date();
 		document.write("date " + (typeof date)+"<br/>");
 		document.write(date.toLocaleString()+"<br/>");		// 当地时间格式化
 		document.write(date.getTime()+"<br/>");				// 毫秒数用于处理缓存
 
+		// Number
 		var num = new Number(123);
 		document.write("num " + (typeof num)+"<br/>");
 
+		// Math
 		var d1 = Math.PI;
 		document.write("d1 " + (typeof d1)+" "+ d1 +"<br/>");
 		document.write("Math " + (typeof Math) + " " + "<br/>");
@@ -76,6 +82,8 @@
 		document.writeln("random:"+Math.random()*10+ "<br/>");
 
 		/*0.注意区分*/
+
+		// number 与 Number(obj)
 		document.write("<br/>");
 		var num1 = 123;					//原始类型
 		var num2 = new Number(123);		//引用类型
@@ -83,6 +91,7 @@
 		document.write("num1 " + (typeof num1)+"<br/>");
 		document.write("num2 " + (typeof num2)+"<br/>");
 
+		// string String(obj) String(method)
 		var str11 = "123";				//原始类型
 		var str12 = new String("123");	//引用类型
 		var str13 = String(123);		//系统提供的方法
@@ -90,8 +99,18 @@
 		document.write("str12 " + (typeof str12)+"<br/>");
 		document.write("str13 " + (typeof str13)+"<br/>");
 
-		var boolean1 = new Boolean();
+		// boolean Boolean(obj)
+		var boolean1 = false;
+ 		var boolean2 = new Boolean();
 		document.write("boolean1 " + (typeof boolean1)+"<br/>");
+		document.write("boolean2 " + (typeof boolean2)+"<br/>");
+
+		//关于null的判断,undefined与null
+		var ccc1;
+		var ccc2 = null;
+		document.write((ccc1 == null) +" "+ (ccc2 == null)+"<br/>");
+		document.write((ccc1 === null) +" "+ (ccc2 === null)+"<br/>");
+
 	</script>
 
 	<!-- 流程控制 -->
@@ -176,8 +195,8 @@
 				String Number Boolean Array Date Math ... Object
 		*/
 
-
 		/*mode1 使用对象字面量的方式{}创建对象*/
+		document.write("<br/>");
 		var z1 = {
 			id:1,
 			name:"sun",
@@ -193,10 +212,36 @@
 
 
 		/*mode2 用function(函数)来模拟class(无参构造函数),(最简单，好理解，推荐使用)*/
+		document.write("<br/>");
+		function f1(){
+
+		}
+		var y1 = new f1();
+		y1.id = 123;
+		y1.name = "sun";
+		y1.getAge = function(num1,num2){
+			return num1+num2;
+		}
+		document.write((typeof f1)+" "+(typeof y1)+"<br/>");
+		document.write("id: "+y1.id+"<br/>");
+		document.write("name: "+y1.name+"<br/>");
+		document.write("func: "+y1.getAge(-20,-50)+"<br/>");
 
 		/*mode3 用有参数构造函数来实现，这样定义更方便，扩展性更强(推荐使用)*/
+		document.write("<br/>");
+		function f2(id,name){
+			this.id = id;
+			this.name = name;
+			this.toSleep = function(){
+				return this.name+"吃饭";
+			}
+		}
 		
-
+		var y2 = new f2(1,"sun");
+		document.write(y2.id+"<br/>");
+		document.write(y2.name+"<br/>");
+		document.write(y2.toSleep()+"<br/>");
+		
 	</script>
 
 
